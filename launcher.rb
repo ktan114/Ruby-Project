@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
+# Ruby does not automatically include current directory 
+# on require look-up path, $:.unshift '.' takes the current folder and
+# adds it to the start of the array of places your ruby app will
+# look for files to require
 
+$:.unshift '.'
 require 'launcher'
 
 # Script to invoke launcher using command-line args
